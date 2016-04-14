@@ -2,11 +2,14 @@ package com.lifeofcoding.kotlintest
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
+import android.support.design.widget.Snackbar.*
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.*
+import android.widget.TextView
 import android.widget.Toast
+import android.widget.Toast.*
 import com.lifeofcoding.java.DividerItemDecoration
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -22,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(this.toolbar)
 
-        this.fab.setOnClickListener(View.OnClickListener { view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show() })
+        this.fab.setOnClickListener { view -> make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show() }
 
         for (i in 0..100) {
             this.data.add("item " + i)
@@ -64,10 +67,11 @@ class MainActivity : AppCompatActivity() {
             val view = inflater.inflate(R.layout.simple_list_item_1, parent, false)
 
             val holder = ViewHolder(view)
-            holder.itemView.text1.setOnClickListener(View.OnClickListener {
+
+            holder.itemView.text1.setOnClickListener {
                 val string = data.get(holder.adapterPosition)
-                Toast.makeText(holder.itemView.context, string, Toast.LENGTH_SHORT).show()
-            })
+                makeText(holder.itemView.context, string, Toast.LENGTH_SHORT).show()
+            }
             return holder
         }
 
