@@ -2,15 +2,13 @@ package com.lifeofcoding.kotlintest
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
-import android.support.design.widget.Snackbar.*
+import android.support.design.widget.Snackbar.make
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.*
-import android.widget.TextView
 import android.widget.Toast
-import android.widget.Toast.*
-import com.lifeofcoding.java.DividerItemDecoration
+import android.widget.Toast.makeText
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.simple_list_item_1.view.*
