@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         this.recyclerView.setLayoutManager(LinearLayoutManager(this))
         this.recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST))
-        this.recyclerView.adapter = Adapter(data)
+        this.recyclerView.adapter = Adapter()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    class Adapter(val data: ArrayList<String>) : RecyclerView.Adapter<ViewHolder>() {
+    inner class Adapter : RecyclerView.Adapter<ViewHolder>() {
 
         override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
             holder?.bind(data.get(position))
